@@ -24,6 +24,7 @@ X_train <- bind_cols(y_train, subject_train, X_train)
 
 # Combine the test and training data
 X <- bind_rows(X_test, X_train)
+
 # Assign names to the columns
 names(X) <- c("Activity", "Subject", features)
 
@@ -36,6 +37,7 @@ X %<>% select(contains("Activity") |
                 contains("std()")) %>% 
        mutate(Activity = activity_labels[Activity]) %>% 
        arrange(Activity, Subject)
+
 # Write to file
 write.csv(X, "tidy_data.csv", row.names = FALSE)
 
@@ -44,6 +46,8 @@ write.csv(X, "tidy_data.csv", row.names = FALSE)
 averages <- X %>% 
     group_by(Activity, Subject) %>% 
     summarize_all(mean)
+
+# Write to file
 write.csv(averages, "tidy_averaged_data.csv", row.names = FALSE)
 
 
