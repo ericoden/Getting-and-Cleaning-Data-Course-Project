@@ -1,4 +1,4 @@
-# README
+# Getting and Cleaning Data Course Project
 
 This project uses data taken from the [University of California: Irvine Human Activity 
 Recognition Using Smartphones (UCI HAR) data set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). The zip file for the data can be downloaded from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The
